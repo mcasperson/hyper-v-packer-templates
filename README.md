@@ -51,3 +51,11 @@ In keeping with my project goals above, Ubuntu 18.04 x64 and Windows 10 x64 are 
 
 ## Troubleshooting
 The build script has a -debug option which sets some packer options to aid in debugging faulty templates. Start with the generated log file: packer-log.txt
+
+## Additional notes
+Connecting to the default switch gives you DHCP and internet access:
+
+```
+$env:hyperv_switchname="Default Switch"
+.\build.ps1
+```
