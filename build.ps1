@@ -17,8 +17,6 @@
     The ammount of RAM in bytes to allocate to the VM. Default: 4096
 .PARAMETER diskSize
     The size of the hard disk drive in bytes used in the VM. Default: 200000
-.PARAMETER username
-    The username for the VM. For simplicity the password will be set as the username. Default: vagrant
 .PARAMETER dontBuildDesktop
     Instructs the build process to just build a server os not the desktop boxes.
 .PARAMETER clean
