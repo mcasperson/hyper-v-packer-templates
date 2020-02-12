@@ -47,7 +47,13 @@
         "scripts": [
             "./scripts/update.sh",
             "./scripts/desktop.sh",
-            "./scripts/cleanup.sh"
+            "./scripts/cleanup.sh",
+            "./scripts/java-jenkins-tomcat.sh"
+        ],
+        "environment_vars": [
+          "DOCKER_USERNAME={{env `DOCKER_USERNAME`}}",
+          "DOCKER_PASSWORD={{env `DOCKER_PASSWORD`}}",
+          "SMTP_PASSWORD={{env `SMTP_PASSWORD`}}"
         ],
         "expect_disconnect": true
     }
