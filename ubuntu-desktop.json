@@ -4,6 +4,9 @@
       "cpu": "2",
       "ram_size": "2048",
       "hyperv_switchname": "{{env `hyperv_switchname`}}",
+      "docker_username": "{{env `DOCKER_USERNAME`}}",
+      "docker_password": "{{env `DOCKER_PASSWORD`}}",
+      "smtp_password": "{{env `SMTP_PASSWORD`}}",
       "username" : "vagrant",
       "password" : "vagrant",
       "output_directory": "./output-ubuntu-18.04-desktop/",
@@ -51,9 +54,9 @@
             "./scripts/java-jenkins-tomcat.sh"
         ],
         "environment_vars": [
-          "DOCKER_USERNAME={{env `DOCKER_USERNAME`}}",
-          "DOCKER_PASSWORD={{env `DOCKER_PASSWORD`}}",
-          "SMTP_PASSWORD={{env `SMTP_PASSWORD`}}"
+          "DOCKER_USERNAME={{user `docker_username`}}",
+          "DOCKER_PASSWORD={{user `docker_password`}}",
+          "SMTP_PASSWORD={{user `smtp_password`}}"
         ],
         "expect_disconnect": true
     }
