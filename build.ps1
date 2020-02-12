@@ -38,7 +38,6 @@ param([string]$outputNamePrefix = "output-ubuntu-18.04",
       [string]$cpus = "2",
       [string]$ramSize = "4096",
       [string]$diskSize = "200000",
-      [string]$username = "vagrant",
       [switch]$dontBuildDesktop = $false,
       [switch]$clean = $false,
       [switch]$force = $false,
@@ -73,7 +72,6 @@ $enhanced_box_location = './{0}/hyperv-{1}-enhanced.box' -f $box_out_dir, $vmNam
 $base_args = @('-var "cpu={0}"' -f $cpus)
 $base_args += '-var "ram_size={0}"' -f $ramSize
 $base_args += '-var "disk_size={0}"' -f $diskSize
-$base_args += '-var "username={0}"' -f $username
 $base_args += '-var "box_out_dir={0}"' -f $box_out_dir
 $base_args += '-var "tmp={0}\{1}"' -f $PSScriptRoot, "tmp"
 if ($debug) {
